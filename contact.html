@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="css/syntax.css">
+</head>
+
+<body>
+    <header>
+        <!-- Typically the site logo and other general site information are placed here -->
+        <h1>Contact</h1>
+        <h2>Contact us for with any questions.</h2>
+    </header>
+        
+    <nav>
+        <a href="index.html" data-item="Home">Home</a>
+        <a href="redondo-beach.html" data-item="Redondo Beach">Redondo Beach</a>
+        <a href="tehachapi.html" data-item="Tehachapi">Tehachapi</a>
+        <a href="sacramento.html" data-item="Sacramento">Sacramento</a>
+        <a href="contact.html" data-item="Contact">Contact</a>
+    </nav>
+    <h1>Contact Form</h1>
+    
+    <form id="contact-form">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="Your first name"><br>
+
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname" placeholder="Your last name"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Your email"><br>
+
+        <label for="confirmEmail">Confirm Email:</label><br>
+        <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Confirm your email"><br>
+
+        <label for="question">Question:</label><br>
+        <textarea id="question" name="question" placeholder="Your question"></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // JavaScript function to validate email fields
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            const email = document.getElementById('email').value;
+            const confirmEmail = document.getElementById('confirmEmail').value;
+
+            if (email !== confirmEmail) {
+                alert('Email addresses do not match!');
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+<footer>
+    <p>© 2023 California Information</p>
+    <p>This website meets Federal Government Standards and works 33% of the time, everytime.</p>
+</footer>
+</html>
